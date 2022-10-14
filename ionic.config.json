@@ -1,0 +1,7 @@
+{
+  "name": "worship_scales_web",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
