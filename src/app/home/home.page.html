@@ -1,20 +1,76 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar color="white">
+        <ion-buttons slot="start">
+            <ion-menu-button>
+                <fa-icon [icon]="faBars"></fa-icon>
+            </ion-menu-button>
+        </ion-buttons>        
+            <ion-title class="user-type" >Home</ion-title>
+          <ion-buttons slot="end">
+              <ion-button class="ion--notification">
+                <!--<ion-icon slot="icon-only" name="search"></ion-icon>-->
+                <ion-icon class="ion-icon-chat" name="chatbox"></ion-icon>
+                <ion-badge color="danger">10</ion-badge>
+              </ion-button>
+          </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <div class="page--content">
+        <div class="item-user">
+            <ion-avatar slot="start">
+              <img alt="" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+            </ion-avatar>
+            <div class="usuario-avatar">
+                <strong>{{usuarioLogado?.nome}}</strong>
+                <ion-label>
+                  Ministro 
+                </ion-label>
+            </div>
+        </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+          <div class="usuario-logado">
+              <span> Olá <strong>{{usuarioLogado?.nome.split(" ")[0]}}</strong></span>
+          </div>
+          <div class="ion-card-menu">
+              <ion-card  class="card-menu" color="primary" (click)="ministerios()"> 
+                  <fa-icon  class="icon-home" [icon]="faLayerGroup"></fa-icon>
+                  <ion-card-header class="card-menu-header-title">
+                    <ion-card-title >Ministerios</ion-card-title>
+                   <!-- <ion-card-subtitle>Ministerios incluidos</ion-card-subtitle>-->
+                  </ion-card-header>             
+               
+                </ion-card>
+                
+                <ion-card class="card-menu" color="secondary"(click)="escalas()">
+                  <fa-icon  class="icon-home"[icon]="faTableList"></fa-icon>
+                  <ion-card-header class="card-menu-header-title">
+                    <ion-card-title >Escalas </ion-card-title>
+                    <!--<ion-card-subtitle>Escalas cadastradas</ion-card-subtitle>-->
+                  </ion-card-header>
+                </ion-card>
+          </div>
+          <div class="title-proximas-escalas">
+              <span> <strong>suas Próximas Escalas</strong></span>
+          </div>
+          <div class="list-scales">
+            <div *ngFor="let prox of proximasEscalas"  class="list-ministerio">
+                    <span class="title-ministerio">{{prox?.MINISTERIO}}</span>
+                    <div class="data--escalas">
+                      <div *ngFor="let esc of prox?.ESCALAS" class="list-escalas">
+                        <div class="component--menu">
+                          <strong>{{esc?.DIA_SEMANA.substring(0,3)}}</strong> 
+                          <div>{{esc?.dataEscala.substring(0,5) }}</div>                      
+                        </div>
+                        <fa-icon  [icon]="faChevronRight" class="icon--escala"></fa-icon>
+                    </div>
+                  </div>
+  
+            </div>
+                  
+          </div>
+        </div>
+    </ion-content>
   </div>
-</ion-content>

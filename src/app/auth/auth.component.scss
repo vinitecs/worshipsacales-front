@@ -1,0 +1,109 @@
+.tela--login{
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#container{
+    width: 100%;
+    margin: 0px;
+    height: 48vh;
+    display: flex;
+    flex-direction: column;
+    flex-basis: max-content;
+    padding: 40px 0px;
+}
+.btn--login{
+    display: grid;
+    width: 70%;
+    margin: auto;
+    grid-template-columns: 25.33% 25.33% 25.33%;
+    justify-content: space-evenly;
+    margin-top: 25px;
+}
+.fogoth--pass{
+    text-align: center;
+    text-decoration: none;
+    color: #ccc; 
+    
+}
+.btn--login img{
+    width: 2rem;
+    padding: 10px;    
+    background: #ededed;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+.btn--logar{
+    width: 100%;
+}
+.input--data{
+    width: 97%;
+    border: 2px solid black;
+    border-radius: 3px;
+    padding: 10px 2px;
+    margin: 10px 0px;
+}
+.section--login{
+    width: 70%;
+    margin: auto;
+}
+.input--default{
+    position: relative;    
+}
+.label--default{
+    position: absolute;
+    top: 20px;
+    left: 15px;
+}
+button{
+    border: 2px solid black;
+    border-radius: 3px;
+    padding: 11px;
+    margin: 18px 0px;
+
+}
+.line--div  {
+    width: 71%;
+    margin: auto;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 45% 10% 45%;
+    margin-top: 30px; 
+    color: #ccc;
+}
+
+.line--div .line{
+    display: inline-block;
+    
+    width: 100%;
+    text-align: center;
+}
+.background--img{    
+    width: 100%;
+    text-align: center;
+    height: 15rem;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+}
+.label--default{
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms  ease-in;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.input--data:focus ~ .label--default,
+.input--data:not(:placeholder-shown).input--data:not(:focus) ~ .label--default
+
+{
+  top: 0rem;
+  left: 1.4em;
+  font-size:0.9rem;
+  background-color: rgb(252, 250, 250);  
+  padding: 0px 0.1rem;
+  font-weight: 600;
+  
+} 
+.input--data:focus{
+    outline:none;
+}

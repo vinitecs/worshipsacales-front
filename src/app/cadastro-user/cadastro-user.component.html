@@ -1,0 +1,33 @@
+
+<div [formGroup]="fControl">
+
+  <ion-item fill="outline">
+    <ion-label position="floating">nome</ion-label>
+    <ion-input formControlName="nome" placeholder="nome" type="text" ></ion-input>
+  </ion-item>
+  <ion-item fill="outline">
+    <ion-label position="floating">sobrenome</ion-label>
+    <ion-input formControlName="sobrenome" placeholder="Sobrenome" type="text" ></ion-input>
+  </ion-item>
+  <ion-item fill="outline">
+    <ion-label position="floating">email</ion-label>
+    <ion-input formControlName="email" placeholder="Email"type="email" ></ion-input>
+  </ion-item>
+  <ion-item fill="outline">
+    <ion-label position="floating">senha</ion-label>
+    <ion-input formControlName="senha" placeholder="Senha" type="password" ></ion-input>
+  </ion-item>
+  <ion-item fill="outline">
+    <ion-label position="floating">confirmar senha</ion-label>
+    <ion-input placeholder="Senha" type="password"  [(ngModel)]="confirmarSenha"[ngModelOptions]="{standalone: true}"></ion-input>
+  </ion-item>
+  <ion-item fill="outline">
+    <ion-label position="floating">Telefone</ion-label>
+    <ion-input formControlName="telefone" placeholder="Telefone" type="tel" ></ion-input>
+  </ion-item>
+  <ion-item fill="outline">
+    <ion-label position="floating">data nascimento</ion-label>
+    <ion-input formControlName="dataNascimento" placeholder="Enter text" type="date" ></ion-input>
+  </ion-item>
+<ion-button (click)="cadastrarUsuario()">cadastrar</ion-button>
+</div>

@@ -1,0 +1,141 @@
+
+.item-user{
+    width: 80%;
+    background-color: #06283D ;
+    color: #DFF6FF;
+    margin: auto;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+.card-menu{
+    background: #06283D;
+}
+.usuario-avatar{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+ion-avatar{
+    width: 45px;
+    height: 45px;
+    margin: 15px;
+}
+.usuario-logado{
+    margin: 25px 36px;
+    display: block;
+    font-size: 1.5rem;
+}
+.user-type{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+}
+strong::first-letter{
+    text-transform: uppercase;
+}
+.usuario-logado::first-letter{
+    text-transform: uppercase;
+}
+.ion-card-menu{
+    display: grid;    
+    grid-template-rows: 6rem ;
+    grid-template-columns: 10rem 10rem;
+    align-items: center;
+    justify-content: center;
+}
+.ion-card-menu ion-card{
+    border-radius:10%;
+    border-radius: 10%;
+    height: 4.5rem;
+
+}
+.card-menu{
+    position: relative;
+}
+.card-menu-header-title{
+    position: absolute;
+    bottom: 0.5rem;
+    right: -0.8rem;
+    padding: 2px;
+    width: 100%;
+}
+.card-menu-header-title ion-card-title{
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+.icon-home{
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    font-size: 20px;
+}
+.title-proximas-escalas{
+    margin: 1rem 2rem;
+}
+
+.list-ministerio{
+    width: 80%;
+    margin: auto;
+    background: #06283D;
+    color: #DFF6FF;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px auto;
+}
+.list-escalas{
+    padding: 0px 0px 0px 0px;
+    border-radius: 5px;
+    background-color: #DFF6FF;
+    color: #06283D;
+    margin: 32px 8px 0px 7px;
+    display: flex;
+    align-items: center;
+}
+.data--escalas{
+    display: flex;
+    justify-content: flex-start;
+}
+.title-ministerio{
+    display: block;
+    margin: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.icon--escala{
+    display: block;
+    padding: 13px 6px;
+    background: 0;
+    /*box-shadow: 1px 7px 15px 1px #ccc;*/
+}
+.component--menu{
+    font-size: 12px;
+    margin: 4px 8px;
+}
+.page--content{
+    background-color: #DFF6FF;
+    color: #06283D;
+    padding-top: 50px;
+
+}
+.title-proximas-escalas{
+    text-transform: uppercase;
+}
+
+.ion--notification{
+    position: relative;
+}
+ion-badge{
+    font-size: 9px;
+    position: absolute;
+    top: 0px;
+    right: -7px;
+    border-radius: 18px;
+    padding: 3px;
+    text-align: center;
+}
+.ion-icon-chat{
+    font-size: 1.5rem;
+}

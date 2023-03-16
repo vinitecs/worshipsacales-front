@@ -1,0 +1,81 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons>
+            <ion-menu-button slot="start">   
+                <fa-icon [icon]="faBars"></fa-icon>
+            </ion-menu-button>
+        </ion-buttons>
+        <ion-title>Ministerios</ion-title>
+    </ion-toolbar>
+    <div class="home">
+        <div >
+                <div>
+                    <span></span>
+                    <span></span>
+                </div>
+        </div>
+    </div>
+
+    <ion-content class="principal">
+        
+            <ion-card *ngFor="let min of miniaterio">
+                <ion-card-header>
+                  <ion-card-title>{{min?.nomeMinisterio}}</ion-card-title>
+                  <ion-card-subtitle>Lider:{{min?.nomeLider}} </ion-card-subtitle>
+                  
+                </ion-card-header>
+                
+              
+                <ion-card-content>
+                  <div class="ion-cards">
+                    <ion-avatar slot="start" *ngFor="let pessoas of min.usr">
+                      <img alt="" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+                    </ion-avatar>
+                  </div>
+                  <ion-icon slot="end" name="ellipsis-vertical-outline" id="popover-button"></ion-icon>
+
+                  <ion-popover trigger="popover-button" [dismissOnSelect]="true">
+                    <ng-template>
+                      <ion-content>
+                        <ion-list>
+                          <ion-item [button]="true" [detail]="false">Criar escala</ion-item>
+                          <ion-item [button]="true" [detail]="false">Editar </ion-item>
+                          <ion-item [button]="true" [detail]="false">Excluir </ion-item>
+                                  <!-- futuras aterações -->
+                          <!--<ion-item [button]="true" id="nested-trigger">More options...</ion-item>-->                  
+                        <!--<ion-popover trigger="nested-trigger" [dismissOnSelect]="true" side="end">
+                            <ng-template>
+                              <ion-content>
+                                <ion-list>
+                                  <ion-item [button]="true" [detail]="false">Nested option</ion-item>
+                                </ion-list>
+                              </ion-content>
+                            </ng-template>
+                          </ion-popover>-->  
+                        </ion-list>
+                      </ion-content>
+                    </ng-template>
+                  </ion-popover>
+                </ion-card-content>
+                    
+              </ion-card>
+
+      <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+        <ion-fab-button color=" #06283D">
+          <ion-icon name="chevron-up-circle"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="top">
+          <!--<ion-fab-button>
+            <ion-icon name="trash-outline"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-button>
+            <ion-icon name="create-outline"></ion-icon>
+          </ion-fab-button>-->
+          <ion-fab-button color=" #06283D" (click)="inserirNovoMinisterio()">
+            <ion-icon name="add-outline"></ion-icon>
+          </ion-fab-button>
+        </ion-fab-list>
+      </ion-fab>
+    </ion-content>
+</ion-header>
+

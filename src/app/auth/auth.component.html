@@ -1,0 +1,40 @@
+
+
+
+<div class="tela--login">
+  <div class="background--img">
+      
+  </div>
+    <div id="container">
+      <div class="section--login" [formGroup]="fControl">
+  
+        <div class="input--default">
+          <input class="input--data" type="text" placeholder=" " formControlName="usuario">
+          <label class="label--default">e-mail</label>
+        </div>  
+  
+        <div class="input--default">
+          <input class="input--data" type="password"  placeholder=" " formControlName="senha">
+          <label class="label--default">Senha</label>
+        </div>    
+  
+        <button  class="btn--logar" (click)="logar()">Sign</button>
+       <div class="fogoth--pass"> esqueceu a senha ?</div>
+       <br>
+       <div class="fogoth--pass" (click)="formularioCadastro()">cadastrar</div>
+  
+      </div>
+      <div class="line--div">
+        <div class="line"><hr></div><div class="line">ou</div> <div class="line"><hr></div>
+      </div>
+      <div class="btn--login">
+         <img src="../../assets/icon/google.png" (click)="GAuth()" >
+         <img src="../../assets/icon/facebook.png">
+         <img src="../../assets/icon/spotify.png">
+      </div>
+    </div>
+  
+    </div>
+
+    
+    

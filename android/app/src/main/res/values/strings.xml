@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">worship_scales_web</string>
+    <string name="title_activity_main">worship_scales_web</string>
+    <string name="package_name">com.wrs.app</string>
+    <string name="custom_url_scheme">com.wrs.app</string>
+</resources>

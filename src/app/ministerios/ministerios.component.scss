@@ -1,0 +1,45 @@
+ion-card{
+    background: #06283D;
+    color: white;
+}
+ion-avatar{
+    margin: 12px -6px 0px;
+    width: 2rem;
+    height: 2rem;
+}
+ion-card-content{
+    display: flex;
+}
+
+ion-card-subtitle{
+    color: #DFF6FF;
+    
+}
+ion-card-title{
+    color: #DFF6FF;
+}
+.principal{    
+    height: 94vh;    
+}
+ion-card-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.ion-cards{
+    display: flex;
+}
+ion-fab-button::part(native) {
+    background-color: #06283D;
+    /*border-radius: 15px;*/
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,.3), 0px 1px 3px 1px rgba(0,0,0,.15);
+    color: #DFF6FF;
+  }
+      
+  ion-fab-button::part(native):hover::after {
+    background-color: #06283D;
+  }
+  
+  ion-fab-button::part(native):active::after {
+    background-color: #06283D;
+  }
