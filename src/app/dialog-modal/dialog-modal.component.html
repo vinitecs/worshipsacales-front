@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="medium" (click)="cancel()">Cancel</ion-button>
+    </ion-buttons>
+    <ion-title>Selecione instrumentos para ministerio</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="confirmar()" [strong]="true">Confirm</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item *ngFor="let list of listaDeInstrumentos" 
+              (click)="selecionarInstrumentos(list)">
+      <ion-checkbox slot="start"  [checked]="list.checked"></ion-checkbox>
+      <ion-label>{{list.nomeInstrumento}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

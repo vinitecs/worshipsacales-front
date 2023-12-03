@@ -31,13 +31,13 @@ export class auth{
     }
 
     public authGoogle(user:any):any{
-    
+
       console.log("Param",user)
       console.log(`${API_CONFIG.apiUrl}/wrs/user/google`)
       return this.http.post(`${API_CONFIG.apiUrl}/wrs/user/google`,JSON.stringify(user),{"headers":{"Content-type":"application/Json"}})
     }
     public usuarioLogado():Observable<usuarioLogado>{
-        return this.http.get<usuarioLogado>( `${API_CONFIG.apiUrl}/wrs/user/usuario_logado `)
+        return this.http.get<usuarioLogado>( `${API_CONFIG.apiUrl}/wrs/authResource/usuario_logado `)
     }
 
     public refreshToken(){
@@ -50,17 +50,18 @@ export class auth{
 
 
     successfulLogin(authorizarionValue:string){
-      let tok = authorizarionValue.substring(7) 
+      console.log("authorizarionValue",authorizarionValue)
+      let tok = authorizarionValue.substring(7)
         let user :LocalUser = {
           token: tok,
           email:this.jwtHelper.decodeToken(tok).sub
-        }  
+        }
       this.storage.setLocalUser(user)
     }
-  
-  
+
+
     logout(){
       this.storage.setLocalUser(null)
     }
-  
+
 }
